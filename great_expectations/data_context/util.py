@@ -267,7 +267,7 @@ class PasswordMasker:
 
         # Define a regex to recognize azure storage connection strings
         azure_conn_str_re = re.compile(
-            "(DefaultEndpointsProtocol=(http|https));(AccountName=([a-zA-Z0-9]+));(AccountKey=)([a-zA-Z0-9=\+]+);(EndpointSuffix=([a-zA-Z\.]+))"
+            "(DefaultEndpointsProtocol=(http|https));(AccountName=([a-zA-Z0-9]+));(AccountKey=)([a-zA-Z0-9=\\+]+);(EndpointSuffix=([a-zA-Z\\.]+))"
         )
 
         def recursive_cleaner_method(config: Any) -> None:
